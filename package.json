@@ -1,0 +1,27 @@
+{
+  "name": "hasan_portfolio",
+  "version": "1.0.0",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aqeelbmh/Portfolio_Hassan.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aqeelbmh/Portfolio_Hassan/issues"
+  },
+  "homepage": "https://github.com/Aqeelbmh/Portfolio_Hassan#readme",
+  "description": "",
+  "dependencies": {
+    "@radix-ui/react-tabs": "^1.1.9",
+    "clsx": "^2.1.1",
+    "framer-motion": "^12.9.2",
+    "react-country-flag": "^3.1.0",
+    "tailwind-merge": "^3.2.0"
+  }
+}
