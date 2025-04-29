@@ -82,6 +82,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any inquiries, please reach out to me through the contact form on the portfolio website.
 
+Visit the live site: https://hkfreelancestudio.vercel.app/
+
 ---
 
-Made with ❤️ by Hassan 
+Made with ❤️ by H.K Freelance Studio
