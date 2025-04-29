@@ -1110,3 +1110,65 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+// Responsive behavior handling
+function handleResponsiveBehavior() {
+    const isMobile = window.innerWidth <= 768;
+    const isLandscape = window.innerHeight <= 500 && window.innerWidth > window.innerHeight;
+    
+    // Adjust hero section height for landscape mode
+    if (isLandscape) {
+        document.querySelector('.hero').style.minHeight = 'auto';
+    }
+    
+    // Handle mobile navigation
+    if (isMobile) {
+        const navLinks = document.querySelector('.nav-links');
+        const navToggle = document.querySelector('.nav-toggle');
+        
+        navToggle.addEventListener('click', () => {
+            const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', !isExpanded);
+            navLinks.classList.toggle('open');
+            
+            // Prevent body scroll when mobile menu is open
+            document.body.style.overflow = !isExpanded ? 'hidden' : '';
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navLinks.contains(e.target) && !navToggle.contains(e.target)) {
+                navLinks.classList.remove('open');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+    
+    // Adjust font sizes based on viewport
+    const adjustFontSizes = () => {
+        const vw = window.innerWidth;
+        const baseSize = Math.max(16, Math.min(20, vw / 75));
+        document.documentElement.style.fontSize = `${baseSize}px`;
+    };
+    
+    adjustFontSizes();
+    window.addEventListener('resize', adjustFontSizes);
+}
+
+// Initialize responsive behavior
+document.addEventListener('DOMContentLoaded', () => {
+    handleResponsiveBehavior();
+    
+    // Handle orientation changes
+    window.addEventListener('orientationchange', () => {
+        setTimeout(handleResponsiveBehavior, 100);
+    });
+    
+    // Handle window resize
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(handleResponsiveBehavior, 250);
+    });
+});
