@@ -1,89 +1,189 @@
-# Hassan Portfolio
+# Hassan Portfolio - Professional Accounting Portfolio
 
-A modern and responsive portfolio website built with React and Tailwind CSS. This portfolio showcases my skills, projects, and professional experience in an elegant and interactive way.
+A modern, responsive portfolio website for Hasan Rabiev, a certified accounting professional. Built with React, Tailwind CSS, and Vite for optimal performance and user experience.
 
-## Features
+## 🎯 Features
 
-- 🎨 Modern and clean design
-- 📱 Fully responsive layout
-- ⚡ Fast and optimized performance
-- 🌙 Dark/Light mode support
-- 🎯 Interactive animations
-- 📝 Project showcase
-- 👨‍💻 Skills section
-- 📞 Contact form
-- 🌐 Multi-language support
+### Professional Design
+- **Modern UI/UX**: Clean, professional design with accountant-themed styling
+- **Responsive Layout**: Fully responsive across all devices and screen sizes
+- **Smooth Animations**: Elegant transitions and hover effects
+- **Professional Branding**: Consistent color scheme and visual identity
 
-## Tech Stack
+### Portfolio Sections
+- **Hero Section**: Professional introduction with call-to-action
+- **About Me**: Personal background, statistics, and core competencies
+- **Education**: Academic background with modern card layout
+- **Experience**: Professional work history with achievements
+- **Certifications**: Professional certifications and achievements
+- **Skills**: Technical and soft skills with progress indicators
+- **Languages**: Language proficiency levels
+- **Contact**: Professional contact information and form
 
-- React.js
-- Tailwind CSS
-- Framer Motion
-- React Icons
-- React Country Flag
+### Technical Features
+- **React 18**: Latest React features and hooks
+- **Tailwind CSS**: Utility-first CSS framework for rapid development
+- **Vite**: Fast build tool and development server
+- **Smooth Scrolling**: Seamless navigation between sections
+- **Loading Screen**: Professional loading animation
+- **Scroll Progress**: Visual scroll progress indicator
+- **Back to Top**: Convenient navigation back to top
+- **Mobile Navigation**: Responsive hamburger menu
 
-## Getting Started
+## 🚀 Getting Started
 
 ### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
 ### Installation
 
-1. Clone the repository
+1. **Clone the repository**
 ```bash
-git clone https://github.com/Aqeelbmh/Hassan_Portfolio.git
-```
-
-2. Navigate to the project directory
-```bash
+   git clone <repository-url>
 cd Hassan_Portfolio
 ```
 
-3. Install dependencies
+2. **Install dependencies**
 ```bash
 npm install
-# or
-yarn install
 ```
 
-4. Start the development server
+3. **Start development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open in browser**
+   Navigate to `http://localhost:5173` to view the portfolio
+
+### Build for Production
+
 ```bash
-npm run dev
-# or
-yarn dev
+npm run build
 ```
 
-5. Open your browser and visit `http://localhost:3000`
+The built files will be in the `dist` directory, ready for deployment.
 
-## Project Structure
+## 📁 Project Structure
 
 ```
 Hassan_Portfolio/
-├── public/          # Static files
-├── src/             # Source files
-│   ├── components/  # React components
-│   ├── lib/         # Utility functions
-│   └── styles/      # Global styles
-├── package.json     # Project dependencies
-└── README.md        # Project documentation
+├── src/
+│   ├── components/
+│   │   ├── About.jsx
+│   │   ├── BackToTop.jsx
+│   │   ├── Certifications.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Education.jsx
+│   │   ├── Experience.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Languages.jsx
+│   │   ├── LoadingScreen.jsx
+│   │   ├── Navigation.jsx
+│   │   ├── ScrollProgress.jsx
+│   │   ├── Skills.jsx
+│   │   └── ui/
+│   │       ├── card.jsx
+│   │       └── tabs.jsx
+│   ├── App.jsx
+│   ├── App.css
+│   ├── index.css
+│   ├── main.jsx
+│   └── lib/
+│       └── utils.js
+├── index.html
+├── package.json
+├── tailwind.config.js
+├── vite.config.js
+└── README.md
 ```
 
-## Contributing
+## 🎨 Design System
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+### Color Palette
+- **Primary**: Blue (#3B82F6) to Purple (#8B5CF6) gradient
+- **Secondary**: Green (#10B981) for success indicators
+- **Background**: Dark slate with gradient overlays
+- **Text**: White with various opacity levels for hierarchy
 
-## License
+### Typography
+- **Headings**: Bold, professional font weights
+- **Body**: Clean, readable text with proper line spacing
+- **Accent**: Gradient text effects for emphasis
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+### Components
+- **Cards**: Rounded corners with subtle shadows and borders
+- **Buttons**: Gradient backgrounds with hover effects
+- **Navigation**: Glassmorphism effect with backdrop blur
+- **Icons**: Consistent iconography throughout
 
-## Contact
+## 📱 Responsive Design
 
-For any inquiries, please reach out to me through the contact form on the portfolio website.
+The portfolio is fully responsive with breakpoints:
+- **Mobile**: < 768px
+- **Tablet**: 768px - 1024px
+- **Desktop**: > 1024px
 
-Visit the live site: https://hkfreelancestudio.vercel.app/
+## 🔧 Customization
+
+### Content Updates
+1. **Personal Information**: Update contact details in `Contact.jsx`
+2. **Experience**: Modify work history in `Experience.jsx`
+3. **Education**: Update academic background in `Education.jsx`
+4. **Skills**: Adjust skills and proficiency in `Skills.jsx`
+
+### Styling Changes
+1. **Colors**: Modify the color palette in `tailwind.config.js`
+2. **Animations**: Adjust animation classes in component files
+3. **Layout**: Update grid and flex layouts as needed
+
+### Adding New Sections
+1. Create a new component in `src/components/`
+2. Import and add to `App.jsx`
+3. Update navigation links in `Navigation.jsx`
+
+## 🚀 Deployment
+
+### Netlify
+1. Connect your GitHub repository
+2. Set build command: `npm run build`
+3. Set publish directory: `dist`
+4. Deploy automatically on push
+
+### Vercel
+1. Import your GitHub repository
+2. Vercel will auto-detect Vite configuration
+3. Deploy with default settings
+
+### GitHub Pages
+1. Add `"homepage": "https://username.github.io/repo-name"` to `package.json`
+2. Install gh-pages: `npm install --save-dev gh-pages`
+3. Add deploy script: `"deploy": "gh-pages -d dist"`
+4. Run `npm run build && npm run deploy`
+
+## 📄 License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+## 👨‍💼 About Hasan Rabiev
+
+Hasan Rabiev is a certified accounting professional with expertise in:
+- Financial Analysis and Reporting
+- Tax Planning and Compliance
+- Audit Procedures and Standards
+- Budget Planning and Management
+- GAAP, IFRS, and SOX Compliance
+
+## 🤝 Contact
+
+- **Email**: hasanrabiev123@gmail.com
+- **Phone**: +992 900 016 225
+- **Location**: Jakarta, Indonesia
+- **LinkedIn**: [Hasan Rabiev](https://www.linkedin.com/in/hasan-rabiev-20a554270/)
+- **Instagram**: [@hasan_rbv](https://www.instagram.com/hasan_rbv/)
 
 ---
 
-Made with ❤️ by H.K Freelance Studio
+Built with ❤️ using React, Tailwind CSS, and Vite
