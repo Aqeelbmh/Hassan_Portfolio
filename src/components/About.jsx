@@ -25,7 +25,7 @@ const About = () => {
         
         <div className="max-w-7xl mx-auto">
           {/* Main Content Grid */}
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {/* Profile Image */}
             <div className="lg:col-span-1">
               <div className="relative group">
@@ -34,14 +34,14 @@ const About = () => {
                     <img 
                       src="/my-photo.jpg" 
                       alt="Hasan Rabiev profile photo" 
-                      className="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
+                      className="w-full max-w-xs sm:max-w-sm md:max-w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500 mx-auto"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                   </div>
                 </div>
                 
                 {/* Floating Badge */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-4 py-2 rounded-full text-sm font-medium shadow-lg">
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white px-2 py-1 sm:px-4 sm:py-2 rounded-full text-xs sm:text-sm font-medium shadow-lg">
                   Available for Opportunities
                 </div>
               </div>

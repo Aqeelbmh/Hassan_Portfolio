@@ -64,6 +64,7 @@ const Navigation = () => {
                       ? 'text-white font-bold'
                       : 'text-white/90 hover:text-white'
                   }`}
+                  tabIndex={0}
                 >
                   <span className="relative z-10">{link.label}</span>
                   <span className={`absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 rounded-lg transition-all duration-300 ${activeSection === link.href ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'}`}></span>
@@ -76,8 +77,9 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="lg:hidden p-3 text-white hover:text-blue-300 transition-colors z-50"
+            className="lg:hidden p-3 text-white hover:text-blue-300 transition-colors z-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
             aria-label="Toggle navigation"
+            tabIndex={0}
           >
             <div className="w-6 h-6 flex flex-col justify-center items-center">
               <span className={`w-6 h-0.5 bg-current transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-1' : '-translate-y-1'}`}></span>
@@ -88,21 +90,22 @@ const Navigation = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`lg:hidden transition-all duration-500 overflow-hidden ${
-          isMobileMenuOpen ? 'max-h-96 opacity-100 mt-6' : 'max-h-0 opacity-0'
-        }`}>
-          <div className="bg-slate-900/95 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-2xl">
+        <div className={`lg:hidden fixed top-0 left-0 w-full h-full z-40 transition-all duration-500 ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}
+          onClick={() => setIsMobileMenuOpen(false)}
+        >
+          <div className="bg-slate-900/95 backdrop-blur-xl rounded-none p-8 border-b border-white/20 shadow-2xl w-full max-w-full mt-16" onClick={e => e.stopPropagation()}>
             <div className="space-y-6">
               {navLinks.map((link) => (
                 <a
                   key={link.href}
                   href={`#${link.href}`}
-                  onClick={(e) => { e.preventDefault(); scrollToSection(link.href) }}
+                  onClick={(e) => { e.preventDefault(); scrollToSection(link.href); setIsMobileMenuOpen(false); }}
                   className={`block text-base font-medium py-4 px-6 rounded-xl border border-transparent transition-all duration-200 whitespace-nowrap ${
                     activeSection === link.href
                       ? 'text-white bg-gradient-to-r from-blue-500/10 to-purple-500/10 font-bold' 
                       : 'text-white/80 hover:text-white hover:bg-white/5 hover:border-white/10'
                   }`}
+                  tabIndex={0}
                 >
                   {link.label}
                 </a>
