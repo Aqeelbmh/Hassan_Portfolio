@@ -37,4 +37,6 @@ yarn-error.log*
 *.gif
 *.ico
 *.pdf
-!public/my-photo.jpg 
+!public/my-photo.jpg
+!public/Privacy Policy_h.k.pdf
+!public/Terms of Service_hk.pdf 

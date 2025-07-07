@@ -132,14 +132,11 @@ const Footer = () => {
             &copy; 2025 H.K – Freelance Studio. All rights reserved.
           </p>
           <div className="flex flex-wrap gap-4 justify-center md:justify-end">
-            <a href="#" className="text-white/70 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" tabIndex={0}>
+            <a href="/Privacy Policy_h.k.pdf" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" tabIndex={0}>
               Privacy Policy
             </a>
-            <a href="#" className="text-white/70 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" tabIndex={0}>
+            <a href="/Terms of Service_hk.pdf" target="_blank" rel="noopener noreferrer" className="text-white/70 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" tabIndex={0}>
               Terms of Service
-            </a>
-            <a href="#" className="text-white/70 hover:text-white text-sm transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500" tabIndex={0}>
-              Professional Standards
             </a>
           </div>
         </div>
