@@ -39,7 +39,7 @@ const Hero = () => {
           ethical accounting practices.
         </p>
         
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in-delay-3">
+        <div className="flex flex-col sm:flex-row gap-4 w-full justify-center items-center text-center animate-fade-in-delay-3">
           <button
             onClick={() => scrollToSection('contact')}
             className="w-full sm:w-auto px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 transform hover:scale-105 flex items-center gap-2"
