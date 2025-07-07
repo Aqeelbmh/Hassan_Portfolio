@@ -36,4 +36,5 @@ yarn-error.log*
 *.png
 *.gif
 *.ico
-*.pdf 
+*.pdf
+!public/my-photo.jpg 
