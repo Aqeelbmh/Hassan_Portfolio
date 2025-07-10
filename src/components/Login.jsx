@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
-const DEFAULT_USERNAME = 'admin'
-const DEFAULT_PASSWORD = 'admin123'
+const DEFAULT_USERNAME = 'hasan_rabiev'
+const DEFAULT_PASSWORD = 'Unsika2021#'
 
 const Login = ({ onLogin }) => {
   const [username, setUsername] = useState('')
