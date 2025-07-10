@@ -1,0 +1,32 @@
+{
+  "skills": [
+    { "name": "Financial Accounting", "level": 95, "category": "accounting" },
+    { "name": "Managerial Accounting", "level": 90, "category": "accounting" },
+    { "name": "Cost Accounting", "level": 85, "category": "accounting" },
+    { "name": "Tax Accounting", "level": 88, "category": "accounting" },
+    { "name": "Audit Procedures", "level": 85, "category": "accounting" },
+    { "name": "Financial Statements", "level": 92, "category": "accounting" },
+    { "name": "Microsoft Excel", "level": 95, "category": "technical" },
+    { "name": "QuickBooks", "level": 85, "category": "technical" },
+    { "name": "SAP ERP", "level": 80, "category": "technical" },
+    { "name": "Power BI", "level": 75, "category": "technical" },
+    { "name": "SQL Database", "level": 70, "category": "technical" },
+    { "name": "Tableau", "level": 75, "category": "technical" },
+    { "name": "Financial Analysis", "level": 90, "category": "analysis" },
+    { "name": "Budget Planning", "level": 88, "category": "analysis" },
+    { "name": "Risk Assessment", "level": 85, "category": "analysis" },
+    { "name": "Cost-Benefit Analysis", "level": 82, "category": "analysis" },
+    { "name": "Ratio Analysis", "level": 90, "category": "analysis" },
+    { "name": "Forecasting", "level": 80, "category": "analysis" }
+  ],
+  "attributes": [
+    { "name": "Attention to Detail", "icon": "🔍" },
+    { "name": "Analytical Thinking", "icon": "🧠" },
+    { "name": "Problem Solving", "icon": "💡" },
+    { "name": "Time Management", "icon": "⏰" },
+    { "name": "Communication", "icon": "💬" },
+    { "name": "Team Collaboration", "icon": "🤝" },
+    { "name": "Ethical Standards", "icon": "⚖️" },
+    { "name": "Continuous Learning", "icon": "📚" }
+  ]
+} 

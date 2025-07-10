@@ -1,0 +1,108 @@
+{
+  "experience": [
+    {
+      "id": "1",
+      "position": "Junior Specialist in Remote Service Center",
+      "company": "OJSC \"ALIF BANK\"",
+      "location": "Tajikistan, Dushanbe",
+      "duration": "January 2022 – April 2022",
+      "description": [
+        "Provided customer support through remote channels, addressing inquiries and resolving issues efficiently",
+        "Assisted in onboarding clients to digital banking services",
+        "Maintained client records in compliance with company standards",
+        "Supported senior specialists in handling complex cases",
+        "Gained foundational knowledge of remote banking operations"
+      ],
+      "category": "banking",
+      "priority": 1
+    },
+    {
+      "id": "2",
+      "position": "Specialist in Remote Service Center",
+      "company": "OJSC \"ALIF BANK\"",
+      "location": "Tajikistan, Dushanbe",
+      "duration": "April 2022 – August 2022",
+      "description": [
+        "Handled advanced customer service tasks and complex inquiries",
+        "Enhanced service quality through customer feedback analysis",
+        "Collaborated with cross-functional teams to optimize processes",
+        "Trained and mentored junior specialists",
+        "Troubleshot system issues for improved efficiency"
+      ],
+      "category": "banking",
+      "priority": 2
+    },
+    {
+      "id": "3",
+      "position": "Customer Service Volunteer",
+      "company": "OJSC \"ALIF BANK\"",
+      "location": "Tajikistan, Dushanbe",
+      "duration": "December 2022 (15 days)",
+      "description": [
+        "Assisted customers with inquiries and provided effective solutions",
+        "Developed communication skills through diverse client interactions",
+        "Gained experience in customer service and request management"
+      ],
+      "category": "volunteer",
+      "priority": 3
+    },
+    {
+      "id": "4",
+      "position": "Auto Credit Consultant Volunteer",
+      "company": "OJSC \"ALIF BANK\"",
+      "location": "Tajikistan, Dushanbe",
+      "duration": "December 2022 (15 days)",
+      "description": [
+        "Supported customers with auto credit service applications",
+        "Guided clients through loan application processes",
+        "Reviewed credit applications and provided financial advice"
+      ],
+      "category": "volunteer",
+      "priority": 4
+    },
+    {
+      "id": "5",
+      "position": "Inbound Logistics",
+      "company": "KKN Unsika",
+      "location": "Indonesia",
+      "duration": "June 26 – August 5, 2024",
+      "description": [
+        "Managed resource distribution and logistics for program activities",
+        "Coordinated food and supplies for participants and community",
+        "Enhanced teamwork and organizational skills"
+      ],
+      "category": "logistics",
+      "priority": 5
+    },
+    {
+      "id": "6",
+      "position": "Service Learning Program Participant",
+      "company": "SULAM (Service Learning Malaysia - University for Society)",
+      "location": "Indonesia",
+      "duration": "May 30 - June 2, 2023",
+      "description": [
+        "Collaborated on community-based economic projects",
+        "Applied theoretical knowledge to real-world scenarios",
+        "Fostered cross-cultural communication and teamwork",
+        "Conducted economic assessments and proposed solutions"
+      ],
+      "category": "community",
+      "priority": 6
+    },
+    {
+      "id": "7",
+      "position": "Service Learning Program Participant",
+      "company": "SULAM (Service Learning Malaysia - University for Society)",
+      "location": "Malaysia",
+      "duration": "May 16 - May 25, 2024",
+      "description": [
+        "Engaged in community empowerment through economic strategies",
+        "Coordinated with local stakeholders on impactful projects",
+        "Enhanced problem-solving skills in multicultural environments",
+        "Presented findings and recommendations to leaders"
+      ],
+      "category": "community",
+      "priority": 7
+    }
+  ]
+} 

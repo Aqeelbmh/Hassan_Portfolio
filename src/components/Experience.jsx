@@ -1,96 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
+import dataService from '../services/dataService'
 
 const Experience = () => {
-  const experienceData = [
-    {
-      position: 'Junior Specialist in Remote Service Center',
-      company: 'OJSC "ALIF BANK"',
-      location: 'Tajikistan, Dushanbe',
-      duration: 'January 2022 – April 2022',
-      description: [
-        'Provided customer support through remote channels, addressing inquiries and resolving issues efficiently',
-        'Assisted in onboarding clients to digital banking services',
-        'Maintained client records in compliance with company standards',
-        'Supported senior specialists in handling complex cases',
-        'Gained foundational knowledge of remote banking operations'
-      ]
-    },
-    {
-      position: 'Specialist in Remote Service Center',
-      company: 'OJSC "ALIF BANK"',
-      location: 'Tajikistan, Dushanbe',
-      duration: 'April 2022 – August 2022',
-      description: [
-        'Handled advanced customer service tasks and complex inquiries',
-        'Enhanced service quality through customer feedback analysis',
-        'Collaborated with cross-functional teams to optimize processes',
-        'Trained and mentored junior specialists',
-        'Troubleshot system issues for improved efficiency'
-      ]
-    },
-    {
-      position: 'Customer Service Volunteer',
-      company: 'OJSC "ALIF BANK"',
-      location: 'Tajikistan, Dushanbe',
-      duration: 'December 2022 (15 days)',
-      description: [
-        'Assisted customers with inquiries and provided effective solutions',
-        'Developed communication skills through diverse client interactions',
-        'Gained experience in customer service and request management'
-      ]
-    },
-    {
-      position: 'Auto Credit Consultant Volunteer',
-      company: 'OJSC "ALIF BANK"',
-      location: 'Tajikistan, Dushanbe',
-      duration: 'December 2022 (15 days)',
-      description: [
-        'Supported customers with auto credit service applications',
-        'Guided clients through loan application processes',
-        'Reviewed credit applications and provided financial advice'
-      ]
-    },
-    {
-      position: 'Inbound Logistics',
-      company: 'KKN Unsika',
-      location: 'Indonesia',
-      duration: 'June 26 – August 5, 2024',
-      description: [
-        'Managed resource distribution and logistics for program activities',
-        'Coordinated food and supplies for participants and community',
-        'Enhanced teamwork and organizational skills'
-      ]
-    },
-    {
-      position: 'Service Learning Program Participant',
-      company: 'SULAM (Service Learning Malaysia - University for Society)',
-      location: 'Indonesia',
-      duration: 'May 30 - June 2, 2023',
-      description: [
-        'Collaborated on community-based economic projects',
-        'Applied theoretical knowledge to real-world scenarios',
-        'Fostered cross-cultural communication and teamwork',
-        'Conducted economic assessments and proposed solutions'
-      ]
-    },
-    {
-      position: 'Service Learning Program Participant',
-      company: 'SULAM (Service Learning Malaysia - University for Society)',
-      location: 'Malaysia',
-      duration: 'May 16 - May 25, 2024',
-      description: [
-        'Engaged in community empowerment through economic strategies',
-        'Coordinated with local stakeholders on impactful projects',
-        'Enhanced problem-solving skills in multicultural environments',
-        'Presented findings and recommendations to leaders'
-      ]
+  const [experienceData, setExperienceData] = useState([])
+  const [selectedCategory, setSelectedCategory] = useState('all')
+  const [searchQuery, setSearchQuery] = useState('')
+
+  useEffect(() => {
+    // Load experience data
+    let data = dataService.getExperience(selectedCategory === 'all' ? null : selectedCategory)
+    
+    // Apply search filter if query exists
+    if (searchQuery) {
+      data = dataService.searchExperience(searchQuery)
     }
-  ]
+    
+    setExperienceData(data)
+  }, [selectedCategory, searchQuery])
+
+  const categories = dataService.getExperienceCategories()
 
   return (
     <section id="experience" className="py-20 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900">
       <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Work Experience
           </h2>
@@ -98,11 +31,34 @@ const Experience = () => {
             Professional experience across banking, logistics, and community development
           </p>
         </div>
+
+        {/* Filters */}
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+          <input
+            type="text"
+            placeholder="Search experience..."
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <select
+            value={selectedCategory}
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="px-4 py-2 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+          >
+            <option value="all">All Categories</option>
+            {categories.map((category) => (
+              <option key={category} value={category}>
+                {category.charAt(0).toUpperCase() + category.slice(1)}
+              </option>
+            ))}
+          </select>
+        </div>
         
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-8">
             {experienceData.map((item, index) => (
-              <div key={index} className="group">
+              <div key={item.id || index} className="group">
                 <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full relative overflow-hidden">
                   {/* Background Pattern */}
                   <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/10 to-blue-500/10 rounded-full -translate-y-16 translate-x-16"></div>
@@ -141,6 +97,15 @@ const Experience = () => {
                         </svg>
                         <span className="text-sm">{item.location}</span>
                       </div>
+
+                      {/* Category Badge */}
+                      {item.category && (
+                        <div>
+                          <span className="px-2 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs">
+                            {item.category}
+                          </span>
+                        </div>
+                      )}
                       
                       {/* Description */}
                       <div className="space-y-2">
@@ -158,6 +123,18 @@ const Experience = () => {
             ))}
           </div>
         </div>
+
+        {/* No results message */}
+        {experienceData.length === 0 && (
+          <div className="text-center py-12">
+            <p className="text-white/70 text-lg">
+              {searchQuery 
+                ? `No experience found matching "${searchQuery}"`
+                : 'No experience found for the selected category.'
+              }
+            </p>
+          </div>
+        )}
       </div>
     </section>
   )

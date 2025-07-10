@@ -1,0 +1,9 @@
+{
+  "languages": [
+    { "name": "Tajik", "flag": "https://flagcdn.com/tj.svg", "level": "Native", "group": "native" },
+    { "name": "Persian", "flag": "https://flagcdn.com/ir.svg", "level": "Native", "group": "native" },
+    { "name": "Russian", "flag": "https://flagcdn.com/ru.svg", "level": "Excellent", "group": "advanced" },
+    { "name": "English", "flag": "https://flagcdn.com/gb.svg", "level": "Upper-Intermediate", "group": "advanced" },
+    { "name": "Indonesian", "flag": "https://flagcdn.com/id.svg", "level": "Intermediate", "group": "intermediate" }
+  ]
+} 

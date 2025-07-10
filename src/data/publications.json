@@ -1,0 +1,16 @@
+{
+  "publications": [
+    {
+      "id": "1",
+      "title": "Exploring the Use of ChatGPT in Academic Assignments: Frequency, Benefits, and Perceptions among University Students",
+      "publisher": "ResearchGate",
+      "year": "2024",
+      "description": "This paper investigates how university students utilize ChatGPT for academic assignments, examining usage frequency, perceived benefits, and overall attitudes toward AI-assisted learning tools.",
+      "link": "https://www.researchgate.net/publication/388735417_Exploring_the_Use_of_ChatGPT_in_Academic_Assignments_Frequency_Benefits_and_Perceptions_among_University_Students",
+      "category": "research",
+      "priority": 1,
+      "authors": ["Hassan"],
+      "type": "journal_article"
+    }
+  ]
+} 
